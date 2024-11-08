@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liferoll - Help</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="assets/logo.png" alt="Liferoll" class="logo-icon" />
+                <span class="logo-text">liferoll.</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="#" class="nav-link">Outfits</a>
+                <a href="#" class="nav-link">Travel Diary</a>
+                <a href="#" class="nav-link">1 Moment a Day</a>
+                <a href="#" class="nav-link">Gratitude Journal</a>
+                <a href="#" class="nav-link">Photography</a>
+                <a href="#" class="nav-link get-liferoll">Get Liferoll</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <nav class="navbar">
+            <div class="nav-container">
+              <a href="/" class="nav-logo">
+                <img src="assets/logo.png" class="logo-icon" alt="Liferoll">
+                <span class="logo-text">liferoll.</span>
+              </a>
+              <nav-links>
+                <a href="#" class="nav-link">Outfits</a> &nbsp;.&nbsp; <a href="#" class="nav-link">Travel Diary</a> &nbsp;.&nbsp; <a href="#" class="nav-link">1 Moment a Day</a> &nbsp;.&nbsp; <a href="#" class="nav-link">Gratitude Journal</a> &nbsp;.&nbsp; <a href="#" class="nav-link">Photography</a> &nbsp;|&nbsp; <a href="#" class="nav-link get-liferoll">Get Liferoll</a>
+              </nav-links>
+            </div>
+        </nav>
+
+        <!-- Help Page Content -->
+        <div class="help-page">
+            <div class="help-content">
+                <h1>We're here to help. Tell us what's up!</h1>
+                <div class="contact-links">
+                    <a href="https://www.instagram.com/liferollhq/">DM us on Instagram</a>
+                    <a href="https://x.com/liferollapp?lang=en">DM us on X</a>
+                    <a href="mailto:help@liferoll.co">help@liferoll.co</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer-container">
+            <div class="footer-content">
+                <div class="copyright">© 2024 Liferoll</div>
+                <div class="footer-links">
+                    <a href="/terms">Terms</a> <span class="dot">•</span>
+                    <a href="/content-policy">Content Policy</a> <span class="dot">•</span>
+                    <a href="/privacy">Privacy</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="store-links.js"></script>
+    <script src="steps.js"></script>
+</body>
+</html>
+
+<style>
+.help-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 200px; /* Account for fixed navbar */
+    padding-bottom: 60px;
+    margin-top: -50px; /* Offset the padding-top to align with top of viewport */
+}
+
+.help-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.help-content h1 {
+    font-size: 29px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    color: var(--primary-white);
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-links a {
+    color: #007AFF;
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: 700;
+    transition: opacity 0.2s ease;
+}
+
+.contact-links a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .help-content h1 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+    
+    .contact-links a {
+        font-size: 20px;
+    }
+}
+</style>

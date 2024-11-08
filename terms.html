@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms - Liferoll</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(14, 14, 14);
+            color: #FFFFFF;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            line-height: 1.5;
+        }
+
+        /* Header Styles */
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 16px 60px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(14, 14, 14, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 38px;
+            height: 38px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            color: #FFFFFF;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 16.5px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        /* Main Content Styles */
+        .main-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 100px;
+            min-height: calc(100vh - 120px);
+        }
+
+        .sidebar {
+            width: 200px;
+            padding: 40px 20px;
+            position: fixed;
+        }
+
+        .sidebar-title {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #FFFFFF;
+        }
+
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .sidebar-nav button {
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: left;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            padding: 8px 12px;
+            border-radius: 6px;
+            width: 100%;
+        }
+
+        .sidebar-nav button:hover {
+            color: #FFFFFF;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar-nav button.active {
+            color: #FFFFFF;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .content {
+            margin-left: 240px;
+            flex-grow: 1;
+            padding: 40px;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .cards-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #FF3B30;
+            border-radius: 8px;
+            padding: 20px;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-top: 8px;
+        }
+
+        /* Footer Styles */
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .copyright {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+
+        .dot {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+
+        @media (max-width: 1200px) {
+            .cards-container {
+                flex-direction: column;
+            }
+            
+            .card {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <a href="/" class="nav-logo">
+            <img src="assets/logo.png" alt="Liferoll" class="logo-icon">
+            <span class="logo-text">liferoll.</span>
+        </a>
+        <div class="nav-links">
+            <a href="#" class="nav-link">Outfits</a>
+            <a href="#" class="nav-link">Travel Diary</a>
+            <a href="#" class="nav-link">1 Moment a Day</a>
+            <a href="#" class="nav-link">Gratitude Journal</a>
+            <a href="#" class="nav-link">Photography</a>
+            <a href="#" class="nav-link get-liferoll">Get Liferoll</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <aside class="sidebar">
+            <h2 class="sidebar-title">Legal</h2>
+            <nav class="sidebar-nav">
+                <button class="active" data-section="privacy">Privacy Policy</button>
+                <button data-section="terms">Terms of Service</button>
+                <button data-section="content">Content Policy</button>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <!-- Privacy Policy Section -->
+            <section class="content-section active" id="privacy">
+                <div class="cards-container">
+                    <div class="card">
+                        <h3>Data Security</h3>
+                        <p>We strive to implement the latest safety protocols to keep your data safe.</p>
+                        <p>Your data is encrypted during transfer from devices and servers.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Data Sharing</h3>
+                        <p>We do not sell data to third parties.</p>
+                        <p>Your data will not be used for targeted ads without your explicit consent.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Data Control</h3>
+                        <p>We'll purge your data from our systems upon request.</p>
+                        <p>You can also request an archive of your data at any time.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Terms of Service Section -->
+            <section class="content-section" id="terms">
+                <div class="cards-container">
+                    <!-- Add Terms of Service cards here -->
+                </div>
+            </section>
+
+            <!-- Content Policy Section -->
+            <section class="content-section" id="content">
+                <div class="cards-container">
+                    <!-- Add Content Policy cards here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="copyright">© 2024 Liferoll</div>
+            <div class="footer-links">
+                <a href="/terms">Terms</a>
+                <span class="dot">•</span>
+                <a href="/content-policy">Content Policy</a>
+                <span class="dot">•</span>
+                <a href="/privacy">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Handle sidebar navigation
+        document.querySelectorAll('.sidebar-nav button').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and sections
+                document.querySelectorAll('.sidebar-nav button').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.content-section').forEach(section => section.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding section
+                button.classList.add('active');
+                document.getElementById(button.dataset.section).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
